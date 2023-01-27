@@ -122,7 +122,6 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := false
 BOARD_USES_METADATA_PARTITION := true
 
 # TWRP specific build flags
-TW_DEVICE_VERSION := 1_UnbeyondTeam
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 RECOVERY_SDCARD_ON_DATA := true
@@ -144,3 +143,47 @@ TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TWRP_INCLUDE_LOGCAT := true
 TW_USE_SAMSUNG_HAPTICS := true
+
+# LZMA Compression
+LZMA_COMPRESSION := -9
+LZMA_RAMDISK_TARGETS := recovery
+
+# Shrp Mandatory flags
+SHRP_PATH := $(DEVICE_PATH)
+SHRP_DEVICE_CODE := $(DEVICE_CODENAME)
+SHRP_MAINTAINER := Nico170420
+SHRP_REC_TYPE := normal
+SHRP_DEVICE_TYPE := A_Only
+SHRP_REC := /dev/block/platform/13100000.ufs/by-name/recovery
+
+# Shrp Important flags
+SHRP_EDL_MODE := 0
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+
+# Optional flags
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+SHRP_NOTCH := true
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
+SHRP_DARK := true
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/devices/virtual/camera/flash/rear_flash
+SHRP_FONP_2 := 
+SHRP_FONP_3 := 
+
+# Other flags
+SHRP_ALT_REBOOT := true
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+
+# Custom addons
+SHRP_EXTERNAL_ADDON_PATH := "$(DEVICE_PATH)/addons/"
+SHRP_EXTERNAL_ADDON_1_NAME := "Bootlogo patcher"
+SHRP_EXTERNAL_ADDON_1_INFO := "Disable bootlogo warnings - exynos only"
+SHRP_EXTERNAL_ADDON_1_FILENAME := "TWRP_Bootlogo_patcher_v1.7.zip"
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Patch now"
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Successfuly patched"
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
