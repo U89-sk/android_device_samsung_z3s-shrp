@@ -13,6 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 DEVICE_PATH := device/samsung/z3s
 
 # Bootloader
@@ -43,8 +48,6 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_CPU_SMP := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
-
-ALLOW_MISSING_DEPENDENCIES := true
 
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
